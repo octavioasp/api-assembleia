@@ -29,11 +29,6 @@ public class SessaoService {
 
     @Transactional
     public Optional<List<Sessao>> findAllSessoes() {
-        List<Sessao> sessoes = sessaoRepository.findAll();
-        /*sessoes.forEach(sessao -> sessao.setPauta(
-                pautaRepository.findById(sessao.getPauta().getId()).orElse(null))
-        );*/
-
         return Optional.of(sessaoRepository.findAll());
     }
 
